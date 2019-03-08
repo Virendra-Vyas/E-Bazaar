@@ -1,0 +1,2033 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/user/user_master.master" AutoEventWireup="true" CodeFile="category_grid_clo.aspx.cs" Inherits="user_category_grid_clo" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    	<!--styleswitcher-->
+
+		<!--wide layout-->
+
+		<div class="wide_layout relative">
+
+			
+
+			<section class="breadcrumbs">
+
+				<div class="container">
+
+					<ul class="horizontal_list clearfix bc_list f_size_medium">
+
+						<li class="m_right_10 current"><a href="#" class="default_t_color">Home<i class="fa fa-angle-right d_inline_middle m_left_10"></i></a></li>
+
+						<li><a href="#" class="default_t_color">Men</a></li>
+
+					</ul>
+
+				</div>
+
+			</section>
+
+			<!--content-->
+
+			<div class="page_content_offset">
+
+				<div class="container">
+
+					<div class="row clearfix">
+
+						<!--left content column-->
+
+						<section class="col-lg-9 col-md-9 col-sm-9">
+
+							<h2 class="tt_uppercase color_dark m_bottom_25">Men</h2>
+                            <asp:Image ID="Image6" runat="server"  ImageUrl="~/user/images/man/download.jpg" class="r_corners m_bottom_40"/>
+							<%--<img class="r_corners m_bottom_40" src="images/img_11.jpg" alt="">--%>
+
+							<!--categories nav-->
+
+							<nav class="m_bottom_40">
+
+								<ul class="horizontal_list clearfix categories_nav_list m_xs_right_0 t_mxs_align_c">
+
+									<li class="m_right_15 f_mxs_none w_mxs_auto d_mxs_inline_b m_mxs_bottom_20">
+
+										<a href="#" class="d_block photoframe tr_all_hover shadow color_dark r_corners">
+
+											<span class="d_block wrapper">
+                                                    <asp:Image ID="Image2" ImageUrl="~/user/images/man/HushBabies-coupons-Sprockets-and-YD-T-Shirts-Set-of-3.jpg" runat="server" class="tr_all_long_hover" Height="150" Width="120" />
+												
+
+											</span>
+
+											T-Shirts
+
+										</a>
+
+									</li>
+
+									<li class="m_right_15 f_mxs_none w_mxs_auto d_mxs_inline_b m_mxs_bottom_20">
+
+										<a href="#" class="d_block photoframe tr_all_hover shadow color_dark r_corners">
+
+											<span class="d_block wrapper">
+                                                        <asp:Image ID="Image1" runat="server" ImageUrl="~/user/images/man/shart.png" class="tr_all_long_hover" Height="150" Width="140"/>
+												
+
+											</span>
+
+											Shirts
+
+										</a>
+
+									</li>
+
+									<li class="m_right_15 f_mxs_none w_mxs_auto d_mxs_inline_b m_mxs_bottom_20">
+
+										<a href="#" class="d_block photoframe tr_all_hover shadow color_dark r_corners">
+
+											<span class="d_block wrapper">
+
+												 <asp:Image ID="Image3" runat="server" ImageUrl="~/user/images/man/jeans.jpg" class="tr_all_long_hover" Height="150" Width="140"/>
+
+											</span>
+
+											Jeans
+
+										</a>
+
+									</li>
+
+									<li class="m_right_15 f_mxs_none w_mxs_auto d_mxs_inline_b m_mxs_bottom_20">
+
+										<a href="#" class="d_block photoframe tr_all_hover shadow color_dark r_corners">
+
+											<span class="d_block wrapper">
+
+												 <asp:Image ID="Image4" runat="server" ImageUrl="~/user/images/man/d2.jpeg" class="tr_all_long_hover" Height="150" Width="140"/>
+
+											</span>
+
+											Pants
+
+										</a>
+
+									</li>
+
+									<li class="m_right_15 f_mxs_none w_mxs_auto d_mxs_inline_b m_mxs_bottom_20">
+
+										<a href="#" class="d_block photoframe tr_all_hover shadow color_dark r_corners">
+
+											<span class="d_block wrapper">
+
+												<img class="tr_all_long_hover" src="images/man/short.jpg" alt="" Height="150" Width="140">
+
+											</span>
+
+											Shorts
+
+										</a>
+
+									</li>
+
+								</ul>
+
+							</nav>
+
+							<!--sort-->
+
+							<div class="row clearfix m_bottom_10">
+
+								<div class="col-lg-7 col-md-8 col-sm-12 m_sm_bottom_10">
+
+									<p class="d_inline_middle f_size_medium">Sort by:</p>
+
+									<div class="clearfix d_inline_middle m_left_10">
+
+										<!--product name select-->
+
+										<div class="custom_select f_size_medium relative f_left">
+
+											<div class="select_title r_corners relative color_dark">Product name</div>
+
+											<ul class="select_list d_none"></ul>
+
+											<select name="product_name">
+
+												<option value="Product SKU">Product SKU</option>
+
+												<option value="Product Price">Product Price</option>
+
+												<option value="Product ID">Product ID</option>
+
+											</select>
+
+										</div>
+
+										<button class="button_type_7 bg_light_color_1 color_dark tr_all_hover r_corners mw_0 box_s_none bg_cs_hover f_left m_left_5"><i class="fa fa-sort-amount-asc m_left_0 m_right_0"></i></button>
+
+									</div>
+
+									<!--manufacturer select-->
+
+									<div class="custom_select f_size_medium relative d_inline_middle m_left_15 m_xs_left_5 m_mxs_left_0 m_mxs_top_10">
+
+										<div class="select_title r_corners relative color_dark">Select manufacturer</div>
+
+										<ul class="select_list d_none"></ul>
+
+										<select name="manufacturer">
+
+											<option value="Manufacture 1">Manufacture 1</option>
+
+											<option value="Manufacture 2">Manufacture 2</option>
+
+											<option value="Manufacture 3">Manufacture 3</option>
+
+										</select>
+
+									</div>
+
+								</div>
+
+								<div class="col-lg-5 col-md-4 col-sm-12 t_align_r t_sm_align_l">
+
+									<!--grid view or list view-->
+
+									<p class="d_inline_middle f_size_medium m_right_5">View as:</p>
+
+									<div class="clearfix d_inline_middle">
+                                       
+                                        
+
+										<a class="button_type_7 bg_scheme_color color_light tr_delay_hover r_corners mw_0 box_s_none bg_cs_hover f_left"><i class="fa fa-th m_left_0 m_right_0"></i></a>
+                                                            
+										<a href="category_list_clo.aspx" class="button_type_7 bg_light_color_1 color_dark tr_delay_hover r_corners mw_0 box_s_none bg_cs_hover f_left m_left_5"><i class="fa fa-th-list m_left_0 m_right_0"></i></a>
+                                       
+									</div>
+
+								</div>
+
+							</div>
+
+							<hr class="m_bottom_10 divider_type_3">
+
+							<div class="row clearfix m_bottom_15">
+
+								<div class="col-lg-7 col-md-7 col-sm-8 col-xs-12 m_xs_bottom_10">
+
+									<p class="d_inline_middle f_size_medium d_xs_block m_xs_bottom_5">Results 1 - 5 of 45</p>
+
+									<p class="d_inline_middle f_size_medium m_left_20 m_xs_left_0">Show:</p>
+
+									<!--show items per page select-->
+
+									<div class="custom_select f_size_medium relative d_inline_middle m_left_5">
+
+										<div class="select_title r_corners relative color_dark">9</div>
+
+										<ul class="select_list d_none"></ul>
+
+										<select name="show">
+
+											<option value="Manufacture 1">6</option>
+
+											<option value="Manufacture 2">3</option>
+
+											<option value="Manufacture 3">1</option>
+
+										</select>
+
+									</div>
+
+									<p class="d_inline_middle f_size_medium m_left_5">items per page</p>
+
+								</div>
+
+								<div class="col-lg-5 col-md-5 col-sm-4 col-xs-12 t_align_r t_xs_align_l">
+
+									<!--pagination-->
+
+									<a role="button" href="#" class="button_type_10 color_dark d_inline_middle bg_cs_hover bg_light_color_1 t_align_c tr_delay_hover r_corners box_s_none"><i class="fa fa-angle-left"></i></a>
+
+									<ul class="horizontal_list clearfix d_inline_middle f_size_medium m_left_10">
+
+										<li class="m_right_10"><a class="color_dark" href="#">1</a></li>
+
+										<li class="m_right_10"><a class="scheme_color" href="#">2</a></li>
+
+										<li class="m_right_10"><a class="color_dark" href="#">3</a></li>
+
+									</ul>
+
+									<a role="button" href="#" class="button_type_10 color_dark d_inline_middle bg_cs_hover bg_light_color_1 t_align_c tr_delay_hover r_corners box_s_none"><i class="fa fa-angle-right"></i></a>
+
+								</div>
+
+							</div>
+
+							<!--products-->
+
+							<section class="products_container category_grid clearfix m_bottom_15">
+
+								<!--product item-->
+
+								<div class="product_item hit w_xs_full">
+
+									<figure class="r_corners photoframe type_2 t_align_c tr_all_hover shadow relative">
+
+										<!--product preview-->
+
+										<a href="#" class="d_block relative wrapper pp_wrap m_bottom_15">
+                                                            <asp:Image ID="Image5" runat="server" src="images/man/d1.jpeg"  Height="324" Width="242"/>
+											
+
+											<span role="button" data-popup="#quick_view_product" class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+
+										</a>
+
+										<!--description and price of product-->
+
+										<figcaption>
+
+											<h5 class="m_bottom_10"><a href="#" class="color_dark">Eget elementum vel</a></h5>
+
+											<!--rating-->
+
+											<ul class="horizontal_list d_inline_b m_bottom_10 clearfix rating_list type_2 tr_all_hover">
+
+												<li class="active">
+
+													<i class="fa fa-star-o empty tr_all_hover"></i>
+
+													<i class="fa fa-star active tr_all_hover"></i>
+
+												</li>
+
+												<li class="active">
+
+													<i class="fa fa-star-o empty tr_all_hover"></i>
+
+													<i class="fa fa-star active tr_all_hover"></i>
+
+												</li>
+
+												<li class="active">
+
+													<i class="fa fa-star-o empty tr_all_hover"></i>
+
+													<i class="fa fa-star active tr_all_hover"></i>
+
+												</li>
+
+												<li class="active">
+
+													<i class="fa fa-star-o empty tr_all_hover"></i>
+
+													<i class="fa fa-star active tr_all_hover"></i>
+
+												</li>
+
+												<li>
+
+													<i class="fa fa-star-o empty tr_all_hover"></i>
+
+													<i class="fa fa-star active tr_all_hover"></i>
+
+												</li>
+
+											</ul>
+
+											<p class="scheme_color f_size_large m_bottom_15">$102.00</p>	
+
+											<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_15">Add to Cart</button>
+
+											<div class="clearfix m_bottom_5">
+
+												<ul class="horizontal_list d_inline_b l_width_divider">
+
+													<li class="m_right_15 f_md_none m_md_right_0"><a href="#" class="color_dark">Add to Wishlist</a></li>
+
+													<li class="f_md_none"><a href="#" class="color_dark">Add to Compare</a></li>
+
+												</ul>
+
+											</div>
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+								<!--product item-->
+
+								<div class="product_item featured w_xs_full">
+
+									<figure class="r_corners photoframe tr_all_hover type_2 t_align_c shadow relative">
+
+										<!--product preview-->
+
+										<a href="#" class="d_block relative wrapper pp_wrap m_bottom_15">
+
+											
+                                             <asp:Image ID="Image7" runat="server" src="images/man/d2.jpeg"  Height="324" Width="242"/>
+
+											<span role="button" data-popup="#quick_view_product" class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+
+										</a>
+
+										<!--description and price of product-->
+
+										<figcaption>
+
+											<h5 class="m_bottom_10"><a href="#" class="color_dark">Ut tellus dolor dapibus</a></h5>
+
+											<div class="clearfix m_bottom_15">
+
+												<!--rating-->
+
+												<ul class="horizontal_list type_2 m_bottom_10 d_inline_b clearfix rating_list tr_all_hover">
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li>
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+												</ul>
+
+												<p class="scheme_color f_size_large">$57.00</p>
+
+											</div>
+
+											<div class="clearfix">
+
+												<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_15">Add to Cart</button>
+
+											</div>
+
+											<div class="clearfix m_bottom_5">
+
+												<ul class="horizontal_list d_inline_b l_width_divider">
+
+													<li class="m_right_15 f_md_none m_md_right_0"><a href="#" class="color_dark">Add to Wishlist</a></li>
+
+													<li class="f_md_none"><a href="#" class="color_dark">Add to Compare</a></li>
+
+												</ul>
+
+											</div>
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+								<!--product item-->
+
+								<div class="product_item new w_xs_full">
+
+									<figure class="r_corners photoframe tr_all_hover type_2 t_align_c shadow relative">
+
+										<!--product preview-->
+
+										<a href="#" class="d_block relative wrapper pp_wrap m_bottom_15">
+                                                                <asp:Image ID="Image8" runat="server"  Height="324" Width="242" ImageUrl="~/user/images/man/IMG-20140513-WA0011.jpg"/>
+											<%--<img src="images/man/IMG-20140513-WA0011.jpg" class="tr_all_hover" alt="">--%>
+
+											<span role="button" data-popup="#quick_view_product" class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+
+										</a>
+
+										<!--description and price of product-->
+
+										<figcaption>
+
+											<h5 class="m_bottom_10"><a href="#" class="color_dark">Cursus eleifend elit aenean.</a></h5>
+
+											<div class="clearfix">
+
+												<!--rating-->
+
+												<ul class="horizontal_list d_inline_b m_bottom_10 type_2 clearfix rating_list tr_all_hover">
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li>
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+												</ul>
+
+												<p class="scheme_color f_size_large m_bottom_15">$99.00</p>
+
+											</div>
+
+											<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_15">Add to Cart</button>
+
+											<div class="clearfix m_bottom_5">
+
+												<ul class="horizontal_list d_inline_b l_width_divider">
+
+													<li class="m_right_15 f_md_none m_md_right_0"><a href="#" class="color_dark">Add to Wishlist</a></li>
+
+													<li class="f_md_none"><a href="#" class="color_dark">Add to Compare</a></li>
+
+												</ul>
+
+											</div>
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+								<!--product item-->
+
+								<div class="product_item specials w_xs_full">
+
+									<figure class="r_corners photoframe tr_all_hover type_2 t_align_c shadow relative">
+
+										<!--product preview-->
+
+										<a href="#" class="d_block relative wrapper pp_wrap m_bottom_15">
+
+											<asp:Image ID="Image9" runat="server"  Height="324" Width="242" ImageUrl="~/user/images/man/download (1).jpg" />
+
+											<span role="button" data-popup="#quick_view_product" class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+
+										</a>
+
+										<!--description and price of product-->
+
+										<figcaption>
+
+											<h5 class="m_bottom_10"><a href="#" class="color_dark">Aliquam erat volutpat</a></h5>
+
+											<div class="clearfix">
+
+												<!--rating-->
+
+												<ul class="horizontal_list d_inline_b m_bottom_10 type_2 clearfix rating_list tr_all_hover">
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li>
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+												</ul>
+
+												<p class="scheme_color f_size_large m_bottom_15">$102.00</p>
+
+											</div>
+
+											<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_15">Add to Cart</button>
+
+											<div class="clearfix m_bottom_5">
+
+												<ul class="horizontal_list d_inline_b l_width_divider">
+
+													<li class="m_right_15 f_md_none m_md_right_0"><a href="#" class="color_dark">Add to Wishlist</a></li>
+
+													<li class="f_md_none"><a href="#" class="color_dark">Add to Compare</a></li>
+
+												</ul>
+
+											</div>
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+								<!--product item-->
+
+								<div class="product_item hit w_xs_full">
+
+									<figure class="r_corners photoframe tr_all_hover type_2 t_align_c shadow relative">
+
+										<!--product preview-->
+
+										<a href="#" class="d_block relative wrapper pp_wrap m_bottom_15">
+
+											<asp:Image ID="Image10" runat="server"  Height="324" Width="242" ImageUrl="~/user/images/man/download (2).jpg" />
+
+											<span role="button" data-popup="#quick_view_product" class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+
+										</a>
+
+										<!--description and price of product-->
+
+										<figcaption>
+
+											<h5 class="m_bottom_10"><a href="#" class="color_dark">Eget elementum vel</a></h5>
+
+											<div class="clearfix">
+
+												<!--rating-->
+
+												<ul class="horizontal_list d_inline_b m_bottom_10 type_2 clearfix rating_list tr_all_hover">
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li>
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+												</ul>
+
+												<p class="scheme_color f_size_large m_bottom_15">$102.00</p>
+
+											</div>
+
+											<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_15">Add to Cart</button>
+
+											<div class="clearfix m_bottom_5">
+
+												<ul class="horizontal_list d_inline_b l_width_divider">
+
+													<li class="m_right_15 f_md_none m_md_right_0"><a href="#" class="color_dark">Add to Wishlist</a></li>
+
+													<li class="f_md_none"><a href="#" class="color_dark">Add to Compare</a></li>
+
+												</ul>
+
+											</div>
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+								<!--product item-->
+
+								<div class="product_item featured w_xs_full">
+
+									<figure class="r_corners photoframe type_2 t_align_c shadow relative tr_all_hover">
+
+										<!--product preview-->
+
+										<a href="#" class="d_block relative wrapper pp_wrap m_bottom_15">
+
+											<asp:Image ID="Image11" runat="server"  Height="324" Width="242" />
+
+											<span role="button" data-popup="#quick_view_product" class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+
+										</a>
+
+										<!--description and price of product-->
+
+										<figcaption>
+
+											<h5 class="m_bottom_10"><a href="#" class="color_dark">Ut tellus dolor dapibus</a></h5>
+
+											<div class="clearfix m_bottom_15">
+
+												<!--rating-->
+
+												<ul class="horizontal_list d_inline_b m_bottom_10 type_2 clearfix rating_list tr_all_hover">
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li>
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+												</ul>
+
+												<p class="scheme_color f_size_large">$57.00</p>
+
+											</div>
+
+											<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_15">Add to Cart</button>
+
+											<div class="clearfix m_bottom_5">
+
+												<ul class="horizontal_list d_inline_b l_width_divider">
+
+													<li class="m_right_15 f_md_none m_md_right_0"><a href="#" class="color_dark">Add to Wishlist</a></li>
+
+													<li class="f_md_none"><a href="#" class="color_dark">Add to Compare</a></li>
+
+												</ul>
+
+											</div>
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+								<!--product item-->
+
+								<div class="product_item specials w_xs_full">
+
+									<figure class="r_corners photoframe tr_all_hover type_2 t_align_c shadow relative">
+
+										<!--product preview-->
+
+										<a href="#" class="d_block relative wrapper pp_wrap m_bottom_15">
+
+											<asp:Image ID="Image12" runat="server"  Height="324" Width="242" ImageUrl="~/user/images/man/download (3).jpg" />
+
+											<span role="button" data-popup="#quick_view_product" class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+
+										</a>
+
+										<!--description and price of product-->
+
+										<figcaption>
+
+											<h5 class="m_bottom_10"><a href="#" class="color_dark">Eget elementum vel</a></h5>
+
+											<div class="clearfix">
+
+												<!--rating-->
+
+												<ul class="horizontal_list d_inline_b m_bottom_10 type_2 clearfix rating_list tr_all_hover">
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li>
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+												</ul>
+
+												<p class="scheme_color f_size_large m_bottom_15">$99.00</p>
+
+											</div>
+
+											<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_15">Add to Cart</button>
+
+											<div class="clearfix m_bottom_5">
+
+												<ul class="horizontal_list d_inline_b l_width_divider">
+
+													<li class="m_right_15 f_md_none m_md_right_0"><a href="#" class="color_dark">Add to Wishlist</a></li>
+
+													<li class="f_md_none"><a href="#" class="color_dark">Add to Compare</a></li>
+
+												</ul>
+
+											</div>
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+								<!--product item-->
+
+								<div class="product_item specials w_xs_full">
+
+									<figure class="r_corners photoframe tr_all_hover type_2 t_align_c shadow relative">
+
+										<!--product preview-->
+
+										<a href="#" class="d_block relative wrapper pp_wrap m_bottom_15">
+
+											<asp:Image ID="Image13" runat="server"  Height="324" Width="242" />
+
+											<span role="button" data-popup="#quick_view_product" class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+
+										</a>
+
+										<!--description and price of product-->
+
+										<figcaption>
+
+											<h5 class="m_bottom_10"><a href="#" class="color_dark">Cursus eleifend elit aenean.</a></h5>
+
+											<div class="clearfix">
+
+												<!--rating-->
+
+												<ul class="horizontal_list d_inline_b m_bottom_10 type_2 clearfix rating_list tr_all_hover">
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li>
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+												</ul>
+
+												<p class="scheme_color f_size_large m_bottom_15">$99.00</p>
+
+											</div>
+
+											<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_15">Add to Cart</button>
+
+											<div class="clearfix m_bottom_5">
+
+												<ul class="horizontal_list d_inline_b l_width_divider">
+
+													<li class="m_right_15 f_md_none m_md_right_0"><a href="#" class="color_dark">Add to Wishlist</a></li>
+
+													<li class="f_md_none"><a href="#" class="color_dark">Add to Compare</a></li>
+
+												</ul>
+
+											</div>
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+								<!--product item-->
+
+								<div class="product_item rated w_xs_full">
+
+									<figure class="r_corners photoframe tr_all_hover type_2 t_align_c shadow relative">
+
+										<!--product preview-->
+
+										<a href="#" class="d_block relative wrapper pp_wrap m_bottom_15">
+
+											<asp:Image ID="Image14" runat="server"  Height="324" Width="242" />
+
+											<span role="button" data-popup="#quick_view_product" class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+
+										</a>
+
+										<!--description and price of product-->
+
+										<figcaption>
+
+											<h5 class="m_bottom_10"><a href="#" class="color_dark">Aliquam erat volutpat</a></h5>
+
+											<div class="clearfix">
+
+												<!--rating-->
+
+												<ul class="horizontal_list d_inline_b m_bottom_10 type_2 clearfix rating_list tr_all_hover">
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li class="active">
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+													<li>
+
+														<i class="fa fa-star-o empty tr_all_hover"></i>
+
+														<i class="fa fa-star active tr_all_hover"></i>
+
+													</li>
+
+												</ul>
+
+												<p class="scheme_color f_size_large m_bottom_15">$36.00</p>
+
+											</div>
+
+											<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_15">Add to Cart</button>
+
+											<div class="clearfix m_bottom_5">
+
+												<ul class="horizontal_list d_inline_b l_width_divider">
+
+													<li class="m_right_15 f_md_none m_md_right_0"><a href="#" class="color_dark">Add to Wishlist</a></li>
+
+													<li class="f_md_none"><a href="#" class="color_dark">Add to Compare</a></li>
+
+												</ul>
+
+											</div>
+
+										</figcaption>
+
+									</figure>
+
+								</div>
+
+							</section>
+
+							<hr class="m_bottom_10 divider_type_3">
+
+							<div class="row clearfix m_bottom_15 m_xs_bottom_30">
+
+								<div class="col-lg-7 col-md-7 col-sm-8 m_xs_bottom_10">
+
+									<p class="d_inline_middle f_size_medium d_xs_block m_xs_bottom_5">Results 1 - 5 of 45</p>
+
+									<p class="d_inline_middle f_size_medium m_left_20 m_xs_left_0">Show:</p>
+
+									<!--show items per page select-->
+
+									<div class="custom_select f_size_medium relative d_inline_middle m_left_5">
+
+										<div class="select_title r_corners relative color_dark">9</div>
+
+										<ul class="select_list d_none"></ul>
+
+										<select name="show_second">
+
+											<option value="Manufacture 1">6</option>
+
+											<option value="Manufacture 2">3</option>
+
+											<option value="Manufacture 3">1</option>
+
+										</select>
+
+									</div>
+
+									<p class="d_inline_middle f_size_medium m_left_5">items per page</p>
+
+								</div>
+
+								<div class="col-lg-5 col-md-5 col-sm-4 t_align_r t_xs_align_l">
+
+									<!--pagination-->
+
+									<a role="button" href="#" class="button_type_10 color_dark d_inline_middle bg_cs_hover bg_light_color_1 t_align_c tr_delay_hover r_corners box_s_none"><i class="fa fa-angle-left"></i></a>
+
+									<ul class="horizontal_list clearfix d_inline_middle f_size_medium m_left_10">
+
+										<li class="m_right_10"><a class="color_dark" href="#">1</a></li>
+
+										<li class="m_right_10"><a class="scheme_color" href="#">2</a></li>
+
+										<li class="m_right_10"><a class="color_dark" href="#">3</a></li>
+
+									</ul>
+
+									<a role="button" href="#" class="button_type_10 color_dark d_inline_middle bg_cs_hover bg_light_color_1 t_align_c tr_delay_hover r_corners box_s_none"><i class="fa fa-angle-right"></i></a>
+
+								</div>
+
+							</div>
+
+						</section>
+
+						<!--right column-->
+
+						<aside class="col-lg-3 col-md-3 col-sm-3">
+
+							<!--widgets-->
+
+							<figure class="widget shadow r_corners wrapper m_bottom_30">
+
+								<figcaption>
+
+									<h3 class="color_light">Filter</h3>
+
+								</figcaption>
+
+								<div class="widget_content">
+
+									<!--filter form-->
+
+									<form>
+
+										<!--checkboxes-->
+
+										<fieldset class="m_bottom_15">
+
+											<legend class="default_t_color f_size_large m_bottom_15 clearfix full_width relative">
+
+												<b class="f_left">Manufacturers</b>
+
+												<button type="button" class="f_size_medium f_right color_dark bg_tr tr_all_hover close_fieldset"><i class="fa fa-times lh_inherit"></i></button>
+
+											</legend>
+
+											<input type="checkbox" name="" id="checkbox_1" class="d_none"><label for="checkbox_1">Chanel</label><br>
+
+											<input type="checkbox" checked name="" id="checkbox_2" class="d_none"><label for="checkbox_2">Calvin Klein</label><br>
+
+											<input type="checkbox" name="" id="checkbox_3" class="d_none"><label for="checkbox_3">Prada</label><br>
+
+										</fieldset>
+
+										<!--price-->
+
+										<fieldset class="m_bottom_20">
+
+											<legend class="default_t_color f_size_large m_bottom_15 clearfix full_width relative">
+
+												<b class="f_left">Price</b>
+
+												<button type="button" class="f_size_medium f_right color_dark bg_tr tr_all_hover close_fieldset"><i class="fa fa-times lh_inherit"></i></button>
+
+											</legend>
+
+											<div id="price" class="m_bottom_10"></div>
+
+											<div class="clearfix range_values">
+
+												<input class="f_left first_limit" readonly name="" type="text" value="$0">
+
+												<input class="f_right last_limit t_align_r" readonly name="" type="text" value="$250">
+
+											</div>
+
+										</fieldset>
+
+										<!--size-->
+
+										<fieldset class="m_bottom_15">
+
+											<legend class="default_t_color f_size_large m_bottom_15 clearfix full_width relative">
+
+												<b class="f_left">Size</b>
+
+												<button type="button" class="f_size_medium f_right color_dark bg_tr tr_all_hover close_fieldset"><i class="fa fa-times lh_inherit"></i></button>
+
+											</legend>
+
+											<input type="radio" name="size" id="radio_1" class="d_none"><label for="radio_1">S</label><br>
+
+											<input type="radio" name="size" checked id="radio_2" class="d_none"><label for="radio_2">M</label><br>
+
+											<input type="radio" name="size" id="radio_3" class="d_none"><label for="radio_3">L</label><br>
+
+										</fieldset>
+
+										<!--color-->
+
+										<fieldset class="m_bottom_25 m_sm_bottom_20">
+
+											<legend class="default_t_color f_size_large m_bottom_15 clearfix full_width relative">
+
+												<b class="f_left">Color</b>
+
+												<button type="button" class="f_size_medium f_right color_dark bg_tr tr_all_hover close_fieldset"><i class="fa fa-times lh_inherit"></i></button>
+
+											</legend>
+
+											<ul class="horizontal_list clearfix">
+
+												<li class="m_right_5 m_sm_bottom_5"><button type="button" class="select_color red r_corners color_dark active"><i class="fa fa-check lh_inherit tr_all_hover"></i></button></li>
+
+												<li class="m_right_5 m_sm_bottom_5"><button type="button" class="select_color blue r_corners color_dark"><i class="fa fa-check lh_inherit tr_all_hover"></i></button></li>
+
+												<li class="m_right_5 m_sm_bottom_5"><button type="button" class="select_color green r_corners color_dark"><i class="fa fa-check lh_inherit tr_all_hover"></i></button></li>
+
+												<li class="m_right_5 m_sm_bottom_5"><button type="button" class="select_color grey r_corners color_dark"><i class="fa fa-check lh_inherit tr_all_hover"></i></button></li>
+
+												<li class="m_right_5 m_sm_bottom_5"><button type="button" class="select_color yellow r_corners color_dark"><i class="fa fa-check lh_inherit tr_all_hover"></i></button></li>
+
+											</ul>
+
+										</fieldset>
+
+										<fieldset class="m_bottom_25">
+
+											<legend class="default_t_color f_size_large m_bottom_15 clearfix full_width relative">
+
+												<b class="f_left">Weight</b>
+
+												<button type="button" class="f_size_medium f_right color_dark bg_tr tr_all_hover close_fieldset"><i class="fa fa-times lh_inherit"></i></button>
+
+											</legend>
+
+											<div class="clearfix">
+
+												<input type="text" name="" class="r_corners f_left type_2">
+
+												<input type="text" name="" class="r_corners f_left type_2 m_left_10">
+
+											</div>
+
+										</fieldset>
+
+										<button type="reset" class="color_dark bg_tr text_cs_hover tr_all_hover"><i class="fa fa-refresh lh_inherit m_right_10"></i>Reset</button>
+
+									</form>
+
+								</div>
+
+							</figure>
+
+							<figure class="widget shadow r_corners wrapper m_bottom_30">
+
+								<figcaption>
+
+									<h3 class="color_light">Categories</h3>
+
+								</figcaption>
+
+								<div class="widget_content">
+
+									<!--Categories list-->
+
+									<ul class="categories_list">
+
+										<li class="active">
+
+											<a href="#" class="f_size_large scheme_color d_block relative">
+
+												<b>Women</b>
+
+												<span class="bg_light_color_1 r_corners f_right color_dark talign_c"></span>
+
+											</a>
+
+											<!--second level-->
+
+											<ul>
+
+												<li class="active">
+
+													<a href="#" class="d_block f_size_large color_dark relative">
+
+														Dresses<span class="bg_light_color_1 r_corners f_right color_dark talign_c"></span>
+
+													</a>
+
+													<!--third level-->
+
+													<ul>
+
+														<li><a href="#" class="color_dark d_block">Evening Dresses</a></li>
+
+														<li><a href="#" class="color_dark d_block">Casual Dresses</a></li>
+
+														<li><a href="#" class="color_dark d_block">Party Dresses</a></li>
+
+													</ul>
+
+												</li>
+
+												<li>
+
+													<a href="#" class="d_block f_size_large color_dark relative">
+
+														Accessories<span class="bg_light_color_1 r_corners f_right color_dark talign_c"></span>
+
+													</a>
+
+												</li>
+
+												<li>
+
+													<a href="#" class="d_block f_size_large color_dark relative">
+
+														Tops<span class="bg_light_color_1 r_corners f_right color_dark talign_c"></span>
+
+													</a>
+
+												</li>
+
+											</ul>
+
+										</li>
+
+										<li>
+
+											<a href="#" class="f_size_large color_dark d_block relative">
+
+												<b>Men</b>
+
+												<span class="bg_light_color_1 r_corners f_right color_dark talign_c"></span>
+
+											</a>
+
+											<!--second level-->
+
+											<ul class="d_none">
+
+												<li>
+
+													<a href="#" class="d_block f_size_large color_dark relative">
+
+														Shorts<span class="bg_light_color_1 r_corners f_right color_dark talign_c"></span>
+
+													</a>
+
+													<!--third level-->
+
+													<ul class="d_none">
+
+														<li><a href="#" class="color_dark d_block">Evening</a></li>
+
+														<li><a href="#" class="color_dark d_block">Casual</a></li>
+
+														<li><a href="#" class="color_dark d_block">Party</a></li>
+
+													</ul>
+
+												</li>
+
+											</ul>
+
+										</li>
+
+										<li>
+
+											<a href="#" class="f_size_large color_dark d_block relative">
+
+												<b>Kids</b>
+
+												<span class="bg_light_color_1 r_corners f_right color_dark talign_c"></span>
+
+											</a>
+
+										</li>
+
+									</ul>
+
+								</div>
+
+							</figure>
+
+							<!--compare products-->
+
+							<figure class="widget shadow r_corners wrapper m_bottom_30">
+
+								<figcaption>
+
+									<h3 class="color_light">Compare Products</h3>
+
+								</figcaption>
+
+								<div class="widget_content">
+
+									You have no product to compare.
+
+								</div>
+
+							</figure>
+
+							<!--banner-->
+
+							<a href="#" class="d_block r_corners m_bottom_30">
+
+								<img src="images/banner_img_6.jpg" alt="">
+
+							</a>
+
+							<!--Bestsellers-->
+
+							<figure class="widget shadow r_corners wrapper m_bottom_30">
+
+								<figcaption>
+
+									<h3 class="color_light">Bestsellers</h3>
+
+								</figcaption>
+
+								<div class="widget_content">
+
+									<div class="clearfix m_bottom_15">
+
+										<img src="images/bestsellers_img_1.jpg" alt="" class="f_left m_right_15 m_sm_bottom_10 f_sm_none f_xs_left m_xs_bottom_0">
+
+										<a href="#" class="color_dark d_block bt_link">Ut tellus dolor dapibus</a>
+
+										<!--rating-->
+
+										<ul class="horizontal_list clearfix d_inline_b rating_list type_2 tr_all_hover m_bottom_10">
+
+											<li class="active">
+
+												<i class="fa fa-star-o empty tr_all_hover"></i>
+
+												<i class="fa fa-star active tr_all_hover"></i>
+
+											</li>
+
+											<li class="active">
+
+												<i class="fa fa-star-o empty tr_all_hover"></i>
+
+												<i class="fa fa-star active tr_all_hover"></i>
+
+											</li>
+
+											<li class="active">
+
+												<i class="fa fa-star-o empty tr_all_hover"></i>
+
+												<i class="fa fa-star active tr_all_hover"></i>
+
+											</li>
+
+											<li class="active">
+
+												<i class="fa fa-star-o empty tr_all_hover"></i>
+
+												<i class="fa fa-star active tr_all_hover"></i>
+
+											</li>
+
+											<li>
+
+												<i class="fa fa-star-o empty tr_all_hover"></i>
+
+												<i class="fa fa-star active tr_all_hover"></i>
+
+											</li>
+
+										</ul>
+
+										<p class="scheme_color">$61.00</p>
+
+									</div>
+
+									<hr class="m_bottom_15">
+
+									<div class="clearfix m_bottom_15">
+
+										<img src="images/bestsellers_img_2.jpg" alt="" class="f_left m_right_15 m_sm_bottom_10 f_sm_none f_xs_left m_xs_bottom_0">
+
+										<a href="#" class="color_dark d_block bt_link">Elementum vel</a>
+
+										<!--rating-->
+
+										<ul class="horizontal_list clearfix d_inline_b rating_list type_2 tr_all_hover m_bottom_10">
+
+											<li class="active">
+
+												<i class="fa fa-star-o empty tr_all_hover"></i>
+
+												<i class="fa fa-star active tr_all_hover"></i>
+
+											</li>
+
+											<li class="active">
+
+												<i class="fa fa-star-o empty tr_all_hover"></i>
+
+												<i class="fa fa-star active tr_all_hover"></i>
+
+											</li>
+
+											<li class="active">
+
+												<i class="fa fa-star-o empty tr_all_hover"></i>
+
+												<i class="fa fa-star active tr_all_hover"></i>
+
+											</li>
+
+											<li class="active">
+
+												<i class="fa fa-star-o empty tr_all_hover"></i>
+
+												<i class="fa fa-star active tr_all_hover"></i>
+
+											</li>
+
+											<li>
+
+												<i class="fa fa-star-o empty tr_all_hover"></i>
+
+												<i class="fa fa-star active tr_all_hover"></i>
+
+											</li>
+
+										</ul>
+
+										<p class="scheme_color">$57.00</p>
+
+									</div>
+
+									<hr class="m_bottom_15">
+
+									<div class="clearfix m_bottom_5">
+
+										<img src="images/bestsellers_img_3.jpg" alt="" class="f_left m_right_15 m_sm_bottom_10 f_sm_none f_xs_left m_xs_bottom_0">
+
+										<a href="#" class="color_dark d_block bt_link">Crsus eleifend elit</a>
+
+										<!--rating-->
+
+										<ul class="horizontal_list clearfix d_inline_b rating_list type_2 tr_all_hover m_bottom_10">
+
+											<li class="active">
+
+												<i class="fa fa-star-o empty tr_all_hover"></i>
+
+												<i class="fa fa-star active tr_all_hover"></i>
+
+											</li>
+
+											<li class="active">
+
+												<i class="fa fa-star-o empty tr_all_hover"></i>
+
+												<i class="fa fa-star active tr_all_hover"></i>
+
+											</li>
+
+											<li class="active">
+
+												<i class="fa fa-star-o empty tr_all_hover"></i>
+
+												<i class="fa fa-star active tr_all_hover"></i>
+
+											</li>
+
+											<li class="active">
+
+												<i class="fa fa-star-o empty tr_all_hover"></i>
+
+												<i class="fa fa-star active tr_all_hover"></i>
+
+											</li>
+
+											<li>
+
+												<i class="fa fa-star-o empty tr_all_hover"></i>
+
+												<i class="fa fa-star active tr_all_hover"></i>
+
+											</li>
+
+										</ul>
+
+										<p class="scheme_color">$24.00</p>
+
+									</div>
+
+								</div>
+
+							</figure>
+
+							<!--tags-->
+
+							<figure class="widget shadow r_corners wrapper m_bottom_30">
+
+								<figcaption>
+
+									<h3 class="color_light">Tags</h3>
+
+								</figcaption>
+
+								<div class="widget_content">
+
+									<div class="tags_list">
+
+										<a href="#" class="color_dark d_inline_b v_align_b">accessories,</a>
+
+										<a href="#" class="color_dark d_inline_b f_size_ex_large v_align_b">bestseller,</a>
+
+										<a href="#" class="color_dark d_inline_b v_align_b">clothes,</a>
+
+										<a href="#" class="color_dark d_inline_b f_size_big v_align_b">dresses,</a>
+
+										<a href="#" class="color_dark d_inline_b v_align_b">fashion,</a>
+
+										<a href="#" class="color_dark d_inline_b f_size_large v_align_b">men,</a>
+
+										<a href="#" class="color_dark d_inline_b v_align_b">pants,</a>
+
+										<a href="#" class="color_dark d_inline_b v_align_b">sale,</a>
+
+										<a href="#" class="color_dark d_inline_b v_align_b">short,</a>
+
+										<a href="#" class="color_dark d_inline_b f_size_ex_large v_align_b">skirt,</a>
+
+										<a href="#" class="color_dark d_inline_b v_align_b">top,</a>
+
+										<a href="#" class="color_dark d_inline_b f_size_big v_align_b">women</a>
+
+									</div>
+
+								</div>
+
+							</figure>
+
+						</aside>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!--markup footer-->
+
+		</div>
+
+		<!--social widgets-->
+
+		<!--custom popup-->
+
+		<div class="popup_wrap d_none" id="quick_view_product">
+
+			<section class="popup r_corners shadow">
+
+				<button class="bg_tr color_dark tr_all_hover text_cs_hover close f_size_large"><i class="fa fa-times"></i></button>
+
+				<div class="clearfix">
+
+					<div class="custom_scrollbar">
+
+						<!--left popup column-->
+
+						<div class="f_left half_column">
+
+							<div class="relative d_inline_b m_bottom_10 qv_preview">
+
+								<span class="hot_stripe"><img src="images/sale_product.png" alt=""></span>
+
+								<img src="images/quick_view_img_1.jpg" class="tr_all_hover" alt="">
+
+							</div>
+
+							<!--carousel-->
+
+							<div class="relative qv_carousel_wrap m_bottom_20">
+
+								<button class="button_type_11 t_align_c f_size_ex_large bg_cs_hover r_corners d_inline_middle bg_tr tr_all_hover qv_btn_prev">
+
+									<i class="fa fa-angle-left "></i>
+
+								</button>
+
+								<ul class="qv_carousel d_inline_middle">
+
+									<li data-src="images/quick_view_img_1.jpg"><img src="images/quick_view_img_4.jpg" alt=""></li>
+
+									<li data-src="images/quick_view_img_2.jpg"><img src="images/quick_view_img_5.jpg" alt=""></li>
+
+									<li data-src="images/quick_view_img_3.jpg"><img src="images/quick_view_img_6.jpg" alt=""></li>
+
+									<li data-src="images/quick_view_img_1.jpg"><img src="images/quick_view_img_4.jpg" alt=""></li>
+
+									<li data-src="images/quick_view_img_2.jpg"><img src="images/quick_view_img_5.jpg" alt=""></li>
+
+									<li data-src="images/quick_view_img_3.jpg"><img src="images/quick_view_img_6.jpg" alt=""></li>
+
+								</ul>
+
+								<button class="button_type_11 t_align_c f_size_ex_large bg_cs_hover r_corners d_inline_middle bg_tr tr_all_hover qv_btn_next">
+
+									<i class="fa fa-angle-right "></i>
+
+								</button>
+
+							</div>
+
+							<div class="d_inline_middle">Share this:</div>
+
+							<div class="d_inline_middle m_left_5">
+
+								<!-- AddThis Button BEGIN -->
+
+								<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+
+								<a class="addthis_button_preferred_1"></a>
+
+								<a class="addthis_button_preferred_2"></a>
+
+								<a class="addthis_button_preferred_3"></a>
+
+								<a class="addthis_button_preferred_4"></a>
+
+								<a class="addthis_button_compact"></a>
+
+								<a class="addthis_counter addthis_bubble_style"></a>
+
+								</div>
+
+								<!-- AddThis Button END -->
+
+							</div>
+
+						</div>
+
+						<!--right popup column-->
+
+						<div class="f_right half_column">
+
+							<!--description-->
+
+							<h2 class="m_bottom_10"><a href="#" class="color_dark fw_medium">Eget elementum vel</a></h2>
+
+							<div class="m_bottom_10">
+
+								<!--rating-->
+
+								<ul class="horizontal_list d_inline_middle type_2 clearfix rating_list tr_all_hover">
+
+									<li class="active">
+
+										<i class="fa fa-star-o empty tr_all_hover"></i>
+
+										<i class="fa fa-star active tr_all_hover"></i>
+
+									</li>
+
+									<li class="active">
+
+										<i class="fa fa-star-o empty tr_all_hover"></i>
+
+										<i class="fa fa-star active tr_all_hover"></i>
+
+									</li>
+
+									<li class="active">
+
+										<i class="fa fa-star-o empty tr_all_hover"></i>
+
+										<i class="fa fa-star active tr_all_hover"></i>
+
+									</li>
+
+									<li class="active">
+
+										<i class="fa fa-star-o empty tr_all_hover"></i>
+
+										<i class="fa fa-star active tr_all_hover"></i>
+
+									</li>
+
+									<li>
+
+										<i class="fa fa-star-o empty tr_all_hover"></i>
+
+										<i class="fa fa-star active tr_all_hover"></i>
+
+									</li>
+
+								</ul>
+
+								<a href="#" class="d_inline_middle default_t_color f_size_small m_left_5">1 Review(s) </a>
+
+							</div>
+
+							<hr class="m_bottom_10 divider_type_3">
+
+							<table class="description_table m_bottom_10">
+
+								<tr>
+
+									<td>Manufacturer:</td>
+
+									<td><a href="#" class="color_dark">Chanel</a></td>
+
+								</tr>
+
+								<tr>
+
+									<td>Availability:</td>
+
+									<td><span class="color_green">in stock</span> 20 item(s)</td>
+
+								</tr>
+
+								<tr>
+
+									<td>Product Code:</td>
+
+									<td>PS06</td>
+
+								</tr>
+
+							</table>
+
+							<h5 class="fw_medium m_bottom_10">Product Dimensions and Weight</h5>
+
+							<table class="description_table m_bottom_5">
+
+								<tr>
+
+									<td>Product Length:</td>
+
+									<td><span class="color_dark">10.0000M</span></td>
+
+								</tr>
+
+								<tr>
+
+									<td>Product Weight:</td>
+
+									<td>10.0000KG</td>
+
+								</tr>
+
+							</table>
+
+							<hr class="divider_type_3 m_bottom_10">
+
+							<p class="m_bottom_10">Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. </p>
+
+							<hr class="divider_type_3 m_bottom_15">
+
+							<div class="m_bottom_15">
+
+								<s class="v_align_b f_size_ex_large">$152.00</s><span class="v_align_b f_size_big m_left_5 scheme_color fw_medium">$102.00</span>
+
+							</div>
+
+							<table class="description_table type_2 m_bottom_15">
+
+								<tr>
+
+									<td class="v_align_m">Size:</td>
+
+									<td class="v_align_m">
+
+										<div class="custom_select f_size_medium relative d_inline_middle">
+
+											<div class="select_title r_corners relative color_dark">s</div>
+
+											<ul class="select_list d_none"></ul>
+
+											<select name="product_name">
+
+												<option value="s">s</option>
+
+												<option value="m">m</option>
+
+												<option value="l">l</option>
+
+											</select>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td class="v_align_m">Quantity:</td>
+
+									<td class="v_align_m">
+
+										<div class="clearfix quantity r_corners d_inline_middle f_size_medium color_dark">
+
+											<button class="bg_tr d_block f_left" data-direction="down">-</button>
+
+											<input type="text" name="" readonly value="1" class="f_left">
+
+											<button class="bg_tr d_block f_left" data-direction="up">+</button>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+							</table>
+
+							<div class="clearfix m_bottom_15">
+
+								<button class="button_type_12 r_corners bg_scheme_color color_light tr_delay_hover f_left f_size_large">Add to Cart</button>
+
+								<button class="button_type_12 bg_light_color_2 tr_delay_hover f_left r_corners color_dark m_left_5 p_hr_0"><i class="fa fa-heart-o f_size_big"></i><span class="tooltip tr_all_hover r_corners color_dark f_size_small">Wishlist</span></button>
+
+								<button class="button_type_12 bg_light_color_2 tr_delay_hover f_left r_corners color_dark m_left_5 p_hr_0"><i class="fa fa-files-o f_size_big"></i><span class="tooltip tr_all_hover r_corners color_dark f_size_small">Compare</span></button>
+
+								<button class="button_type_12 bg_light_color_2 tr_delay_hover f_left r_corners color_dark m_left_5 p_hr_0 relative"><i class="fa fa-question-circle f_size_big"></i><span class="tooltip tr_all_hover r_corners color_dark f_size_small">Ask a Question</span></button>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+
+		</div>
+
+		
+
+		
+
+		<!--scripts include-->
+
+		<script src="js/jquery-2.1.0.min.js"></script>
+
+		<script src="js/jquery-ui.min.js"></script>
+
+		<script src="js/retina.js"></script>
+
+		<script src="js/waypoints.min.js"></script>
+
+		<script src="js/jquery.isotope.min.js"></script>
+
+		<script src="js/jquery.tweet.min.js"></script>
+
+        <script src="js/owl.carousel.min.js"></script>
+
+		<script src="js/jquery.custom-scrollbar.js"></script>
+
+		<script src="js/styleswitcher.js"></script>
+
+		<script src="js/colorpicker.js"></script>
+
+		<script src="js/scripts_rtl.js"></script>
+</asp:Content>
+

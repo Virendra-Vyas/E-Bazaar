@@ -1,0 +1,369 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="seller_datatable.master.cs" Inherits="seller_seller_datatable" %>
+
+<!DOCTYPE html>
+
+<html>
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+
+<link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN PAGE LEVEL STYLES -->
+<link rel="stylesheet" type="text/css" href="assets/plugins/select2/select2.css"/>
+<link rel="stylesheet" type="text/css" href="assets/plugins/select2/select2-metronic.css"/>
+<link rel="stylesheet" href="assets/plugins/data-tables/DT_bootstrap.css"/>
+<!-- END PAGE LEVEL STYLES -->
+<!-- BEGIN THEME STYLES -->
+<link href="assets/css/style-metronic.css" rel="stylesheet" type="text/css"/>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+<link href="assets/css/plugins.css" rel="stylesheet" type="text/css"/>
+<link href="assets/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+<link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="page-header-fixed">
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-fixed-top">
+	<!-- BEGIN TOP NAVIGATION BAR -->
+	<div class="header-inner">
+		<!-- BEGIN LOGO -->
+		<%--<a class="#" href="index.aspx">
+			<img src="assets/img/logo.JPG" alt="logo" class="#"/>
+		</a>--%>
+		<!-- END LOGO -->
+		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+		<a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<img src="assets/img/menu-toggler.png" alt=""/>
+		</a>
+		<!-- END RESPONSIVE MENU TOGGLER -->
+		<!-- BEGIN TOP NAVIGATION MENU -->
+		<ul class="nav navbar-nav pull-right">
+			<!-- BEGIN NOTIFICATION DROPDOWN -->
+			<li class="dropdown" id="header_notification_bar">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+					<i class="fa fa-warning"></i>
+					<span class="badge">
+						 <asp:Label ID="Label2" runat="server" Text="Label"> 6</asp:Label>
+					</span>
+				</a>
+				<ul class="dropdown-menu extended notification">
+					<li>
+						<p>
+							 <asp:Label ID="Label3" runat="server" Text="Label"> You have 14 new notifications</asp:Label>
+						</p>
+					</li>
+					<li>
+						<ul class="dropdown-menu-list scroller" style="height: 250px;">
+							<li>
+								<a href="#">
+									<span class="label label-sm label-icon label-success">
+										<i class="fa fa-plus"></i>
+									</span>
+									 <asp:Label ID="Label4" runat="server" Text="Label"> New user registered.</asp:Label>
+									<span class="time">
+										 <asp:Label ID="Label5" runat="server" Text="Label"> Just now</asp:Label>
+									</span>
+								</a>
+							</li>
+							
+						</ul>
+					</li>
+					<li class="external">
+						<a href="#">
+                            <asp:Label ID="Label6" runat="server" Text="Label">See all notifications <i class="m-icon-swapright"></i></asp:Label>
+							 
+						</a>
+					</li>
+				</ul>
+			</li>
+			<!-- END NOTIFICATION DROPDOWN -->
+			<!-- BEGIN INBOX DROPDOWN -->
+			<li class="dropdown" id="header_inbox_bar">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+					<i class="fa fa-envelope"></i>
+					<span class="badge">
+						 <asp:Label ID="Label7" runat="server" Text="Label"> 5</asp:Label>
+					</span>
+				</a>
+				<ul class="dropdown-menu extended inbox">
+					<li>
+						<p>
+							 <asp:Label ID="Label8" runat="server" Text="Label">You have 12 new messages</asp:Label>
+						</p>
+					</li>
+					<li>
+						<ul class="dropdown-menu-list scroller" style="height: 250px;">
+							
+							<li>
+								<a href="inbox.html?a=view">
+									<span class="photo">
+										<img src="./assets/img/avatar3.jpg" alt=""/>
+									</span>
+									<span class="subject">
+										<span class="from">
+											 <asp:Label ID="Label9" runat="server" Text="Label">Richard Doe</asp:Label>
+										</span>
+										<span class="time">
+											 <asp:Label ID="Label10" runat="server" Text="Label"> 46 mins</asp:Label>
+										</span>
+									</span>
+									<span class="message">
+										<asp:Label ID="Label11" runat="server" Text="Label">
+                                             Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh...
+										</asp:Label>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="external">
+						<a href="inbox.html">
+                            <asp:Label ID="Label12" runat="server" Text="Label">
+                            See all messages <i class="m-icon-swapright"></i>
+                            </asp:Label>
+							 
+						</a>
+					</li>
+				</ul>
+			</li>
+			<!-- END INBOX DROPDOWN -->
+			<!-- BEGIN TODO DROPDOWN -->
+			
+			<!-- END TODO DROPDOWN -->
+			<!-- BEGIN USER LOGIN DROPDOWN -->
+			<li class="dropdown user">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+					<img alt="" src="assets/img/avatar1_small.jpg"/>
+					<span class="username">
+						 <asp:Label ID="lbl_user_name" runat="server" Text="Label"></asp:Label>
+					</span>
+					<i class="fa fa-angle-down"></i>
+				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">
+							<i class="fa fa-user"></i> <asp:Label ID="lbl_profile" runat="server" Text="Company Profile"></asp:Label>
+						</a>
+					</li>
+					
+					
+					
+					<li class="divider">
+					</li>
+					<li>
+						<a href="javascript:;" id="trigger_fullscreen">
+							<i class="fa fa-arrows"></i> <asp:Label ID="lbl_fullscreen" runat="server" Text="Full Screen"></asp:Label>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-lock"></i> <asp:Label ID="lbl_lock_screen" runat="server" Text="Lock Screen"></asp:Label>
+						</a>
+					</li>
+					<li>
+						<a href="login.html">
+							<i class="fa fa-key"></i> <asp:Label ID="lbl_logout" runat="server" Text="Log Out"></asp:Label>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<!-- END USER LOGIN DROPDOWN -->
+		</ul>
+		<!-- END TOP NAVIGATION MENU -->
+	</div>
+	<!-- END TOP NAVIGATION BAR -->
+</div>
+<!-- END HEADER -->
+<div class="clearfix">
+</div>
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+	<!-- BEGIN SIDEBAR -->
+	<div class="page-sidebar-wrapper">
+		<div class="page-sidebar navbar-collapse collapse">
+			<!-- BEGIN SIDEBAR MENU -->
+			<ul class="page-sidebar-menu" data-auto-scroll="true" data-slide-speed="200">
+				<li class="sidebar-toggler-wrapper">
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+					<div class="sidebar-toggler hidden-phone">
+					</div>
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+				</li>
+				<li class="sidebar-search-wrapper">
+					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+					<form class="sidebar-search" action="extra_search.html" method="POST">
+						<div class="form-container">
+							<div class="input-box">
+								<a href="javascript:;" class="remove">
+								</a>
+								<input type="text" placeholder="Search..."/>
+								<input type="button" class="submit" value=" "/>
+							</div>
+						</div>
+					</form>
+					<!-- END RESPONSIVE QUICK SEARCH FORM -->
+				</li>
+				 <!-------------------------------home---------------------------------------------------------->
+				<li class="start active ">
+					<a href="index.aspx">
+						<i class="fa fa-home"></i>
+						<span class="title">
+							<asp:Label ID="lbl_home" runat="server" Text="Home"></asp:Label>
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+                 <li>
+					<a href="add_product.aspx">
+						<i class="fa fa-shopping-cart"></i>
+						<span class="title">
+							<asp:Label ID="Label1" runat="server" Text="Add Product"></asp:Label>
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+                <li>
+					<a href="add_product_images.aspx">
+						<i class="fa fa-external-link"></i>
+						<span class="title">
+							<asp:Label ID="product_image" runat="server" Text="Product Secondary Image"></asp:Label>
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+                <li>
+					<a href="data_table_product_list.aspx">
+						<i class="fa fa-th"></i>
+						<span class="title">
+							<asp:Label ID="lbl_product_list" runat="server" Text="Product List"></asp:Label>
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+                <li>
+					<a href="data_table_product_images.aspx">
+						<i class="fa fa-th"></i>
+						<span class="title">
+					        <asp:Label ID="lbl_product_images" runat="server" Text="Product images List"></asp:Label>
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+                 <li>
+					<a href="lock_screen.aspx">
+						<i class="fa fa-lock"></i>
+						<span class="title">
+					        <asp:Label ID="lbl_lock_screen_1" runat="server" Text="Lock Screen"></asp:Label>
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+                <li>
+					<a href="profile.aspx">
+						<i class="fa fa-user"></i>
+						<span class="title">
+					        <asp:Label ID="lbl_my_profile" runat="server" Text="Company Profile"></asp:Label>
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+                 <li>
+					<a href="product_review.aspx">
+					<i class="fa fa-check"></i>
+						<span class="title">
+					        <asp:Label ID="lbl_product_review" runat="server" Text="Product Review"></asp:Label>
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+           
+                
+				
+			</ul>
+			<!-- END SIDEBAR MENU -->
+		</div>
+	</div>
+	<!-- END SIDEBAR -->
+	<!-- BEGIN CONTENT -->
+	
+                    <form id="Form1" runat="server">
+                        <asp:ContentPlaceHolder ID="data_table" runat="server">
+
+                         </asp:ContentPlaceHolder>
+                    </form>
+                    
+					
+	 
+<!-- END CONTAINER -->
+<!-- BEGIN FOOTER -->
+<div class="footer">
+	<div class="footer-inner">
+		 <asp:Label ID="lbl_footer" runat="server" Text="Label">
+             2015 &copy; Window shopping
+		 </asp:Label>
+	</div>
+	<div class="footer-tools">
+		<span class="go-top">
+			<i class="fa fa-angle-up"></i>
+		</span>
+	</div>
+</div>
+<!-- END FOOTER -->
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="assets/plugins/respond.min.js"></script>
+<script src="assets/plugins/excanvas.min.js"></script> 
+<![endif]-->
+<script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="assets/plugins/select2/select2.min.js"></script>
+<script type="text/javascript" src="assets/plugins/data-tables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="assets/plugins/data-tables/DT_bootstrap.js"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="assets/scripts/core/app.js"></script>
+<script src="assets/scripts/custom/table-editable.js"></script>
+<script src="assets/scripts/custom/index.js" type="text/javascript"></script>
+<script src="assets/scripts/custom/tasks.js" type="text/javascript"></script>
+<script>
+    jQuery(document).ready(function () {
+        App.init(); // initlayout and core plugins
+        Index.init();
+        Index.initJQVMAP(); // init index page's custom scripts
+        Index.initCalendar(); // init index page's custom scripts
+        Index.initCharts(); // init index page's custom scripts
+        Index.initChat();
+        Index.initMiniCharts();
+        Index.initDashboardDaterange();
+        Index.initIntro();
+        Tasks.initDashboardWidget();
+    });
+</script>
+</body>
+<!-- END BODY -->
+</html>
